@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCD309D8-9B88-4545-94C4-C512D7EFE5CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Attendance_and_Payroll_Management_System</RootNamespace>
+    <AssemblyName>Attendance and Payroll Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAPMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BAPMSDataSet91.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAPMSDataSet91.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmRegistration_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmRegistration_frm.Designer.cs">
+      <DependentUpon>ConfirmRegistration_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount1_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount1_frm.Designer.cs">
+      <DependentUpon>CreateAccount1_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount2_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount2_frm.Designer.cs">
+      <DependentUpon>CreateAccount2_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department_frm.Designer.cs">
+      <DependentUpon>Department_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_frm.Designer.cs">
+      <DependentUpon>Employee_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_frm.Designer.cs">
+      <DependentUpon>Payroll_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Position_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Position_frm.Designer.cs">
+      <DependentUpon>Position_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterAccount_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterAccount_frm.Designer.cs">
+      <DependentUpon>RegisterAccount_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared Components\Dashboard_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shared Components\Dashboard_frm.Designer.cs">
+      <DependentUpon>Dashboard_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp_frm.Designer.cs">
+      <DependentUpon>SignUp_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConfirmRegistration_frm.resx">
+      <DependentUpon>ConfirmRegistration_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount1_frm.resx">
+      <DependentUpon>CreateAccount1_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount2_frm.resx">
+      <DependentUpon>CreateAccount2_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department_frm.resx">
+      <DependentUpon>Department_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_frm.resx">
+      <DependentUpon>Employee_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_frm.resx">
+      <DependentUpon>Payroll_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Position_frm.resx">
+      <DependentUpon>Position_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterAccount_frm.resx">
+      <DependentUpon>RegisterAccount_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shared Components\Dashboard_frm.resx">
+      <DependentUpon>Dashboard_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp_frm.resx">
+      <DependentUpon>SignUp_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BAPMSDataSet.xsc">
+      <DependentUpon>BAPMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet.xss">
+      <DependentUpon>BAPMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet1.xsc">
+      <DependentUpon>BAPMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet1.xss">
+      <DependentUpon>BAPMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet2.xsc">
+      <DependentUpon>BAPMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet2.xss">
+      <DependentUpon>BAPMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet3.xsc">
+      <DependentUpon>BAPMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet3.xss">
+      <DependentUpon>BAPMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet4.xsc">
+      <DependentUpon>BAPMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet4.xss">
+      <DependentUpon>BAPMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet5.xsc">
+      <DependentUpon>BAPMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet5.xss">
+      <DependentUpon>BAPMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet6.xsc">
+      <DependentUpon>BAPMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet6.xss">
+      <DependentUpon>BAPMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet7.xsc">
+      <DependentUpon>BAPMSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet7.xss">
+      <DependentUpon>BAPMSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet8.xsc">
+      <DependentUpon>BAPMSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet8.xss">
+      <DependentUpon>BAPMSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet91.xsc">
+      <DependentUpon>BAPMSDataSet91.xsd</DependentUpon>
+    </None>
+    <None Include="BAPMSDataSet91.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAPMSDataSet91.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAPMSDataSet91.xss">
+      <DependentUpon>BAPMSDataSet91.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StudentDBDataSet.xsc">
+      <DependentUpon>StudentDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDBDataSet.xss">
+      <DependentUpon>StudentDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet1.xsc">
+      <DependentUpon>StudentDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDBDataSet1.xss">
+      <DependentUpon>StudentDBDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_password_50px.png" />
+    <None Include="Resources\icons8_next_70px.png" />
+    <None Include="Resources\icons8_name_50px.png" />
+    <None Include="Resources\icons8_filled_circle_50px.png" />
+    <None Include="Resources\Search engine _Monochromatic.png" />
+    <None Include="Resources\Progress _Monochromatic.png" />
+    <None Include="Resources\administrator_male_125px.png" />
+    <None Include="Resources\125503.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icons8_360_degrees_80px.png" />
+    <Content Include="Resources\icons8_align_center_80px.png" />
+    <None Include="Resources\icons8_Align_Center_80px_1.png" />
+    <Content Include="Resources\icons8_attendance_80px.png" />
+    <Content Include="Resources\icons8_combo_chart_80px.png" />
+    <Content Include="Resources\icons8_logout_rounded_left_80px_2.png" />
+    <Content Include="Resources\icons8_organization_chart_people_80px.png" />
+    <None Include="Resources\icons8_organization_chart_people_80px_1.png" />
+    <Content Include="Resources\icons8_payroll_80px.png" />
+    <Content Include="Resources\icons8_user_groups_80px.png" />
+    <None Include="Resources\icons8_user_groups_80px_1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
